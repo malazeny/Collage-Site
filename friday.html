@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friday</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <h1> My Friday </h1>
+
+    <button id="backButton"> Back </button>
+    <button id="redirectButton"> Next </button>
+
+    <script>
+        document.getElementById('redirectButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'thursday.html';
+        });
+    </script>
+</body>
+</html>
