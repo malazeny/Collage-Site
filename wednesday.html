@@ -9,17 +9,45 @@
 <body>
     <h1> My Wednesday </h1>
 
-    <button id="backButton"> Back </button>
-    <button id="redirectButton"> Next </button>
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <img src="images/wednesday/cherries.png" alt="Cherry Image">
+        </div>
+        <div class="grid-item item2">
+            <img src="images/wednesday/openbag.png" alt="openbag Image">
+        </div>
+        <div class="grid-item item3">
+            <img src="images/wednesday/home.png" alt="Home Image">
+        </div>
+        <div class="grid-item item4">
+            <img src="images/wednesday/Koala.png" alt="Koala Image">
+        </div>
+        <div class="grid-item item5">
+            <img src="images/wednesday/sleep.png" alt="Sleep Image">
+        </div>
+        <div class="grid-item item6">
+            <img src="images/wednesday/train.png" alt="Train Image">
+        </div>
+        <div class="grid-item item7">
+            <img src="images/wednesday/bagpocket.png" alt="bagpocket Image">
+        </div>
 
-    <script>
-        document.getElementById('redirectButton').addEventListener('click', function() {
-            window.location.href = 'thursday.html';
-        });
-
-        document.getElementById('backButton').addEventListener('click', function() {
-            window.location.href = 'tuesday.html';
-        });
-    </script>
+        <button id="backButton"> Tuesday </button>
+        <button id="homeButton"> Home </button>
+        <button id="nextButton"> Thursday </button>
+    
+        <script>
+            document.getElementById('backButton').addEventListener('click', function() {
+                window.location.href = 'tuesday.html';
+            });
+    
+            document.getElementById('homeButton').addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            
+            document.getElementById('nextButton').addEventListener('click', function() {
+                window.location.href = 'thursday.html';
+            });
+        </script>
 </body>
 </html>

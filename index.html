@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> A look into Malaz's weekly mind</h1>
-    <button id="redirectButton"> Dive In </button>
+    <h1>A look into my weekly mind!</h1>
 
+    <div class="image-container">
+        <img id="mondayImage" src="images/thursday/startpage/monday.png" alt="Monday" style="cursor:pointer; width:200px;">
+        <img id="tuesdayImage" src="images/thursday/startpage/tuesday.png" alt="Tuesday" style="cursor:pointer; width:200px;">
+        <img id="wednesdayImage" src="images/thursday/startpage/wednesday.png" alt="Wednesday" style="cursor:pointer; width:200px;">
+        <img id="thursdayImage" src="images/thursday/startpage/thursday.png" alt="Thursday" style="cursor:pointer; width:200px;">
+        <img id="fridayImage" src="images/thursday/startpage/friday.png" alt="Friday" style="cursor:pointer; width:200px;">
+    </div>
+    
+    
     <script>
-        document.getElementById('redirectButton').addEventListener('click', function() {
+        document.getElementById('mondayImage').addEventListener('click', function() {
             window.location.href = 'monday.html';
         });
-    </script>
 
-    
+        document.getElementById('tuesdayImage').addEventListener('click', function() {
+            window.location.href = 'tuesday.html';
+        });
+
+        document.getElementById('wednesdayImage').addEventListener('click', function() {
+            window.location.href = 'wednesday.html';
+        });
+
+        document.getElementById('thursdayImage').addEventListener('click', function() {
+            window.location.href = 'thursday.html';
+        });
+        document.getElementById('fridayImage').addEventListener('click', function() {
+            window.location.href = 'friday.html';
+        });
+    </script>
 </body>
 </html>

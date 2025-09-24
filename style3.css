@@ -3,10 +3,6 @@
     src: url("fonts/Bubble.ttf");
 }
 
-body{
-    background-color: rgb(248, 218, 161);
-    text-align: center;
-}
 
 h1{
     font-family: BubbleFont;
@@ -15,33 +11,192 @@ h1{
     text-shadow: 2px 2px 4px #000000;
 }
 
-#redirectButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    margin-left: 70%;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 15vh);
+    grid-template-rows: repeat(7, 15vh); /* 10 rows split evenly */
+    height: 100vh; /* exactly one screen tall */
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#backButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    /* margin-right: 70%; */
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-button:hover{
-    background-color: white;
-    opacity: 0.8;
+.item1{ /* fish */
+    grid-column: 1 ; /* First column */
+    grid-row: 1;    /* First row */
+}
+
+
+.item1 img {
+    width: 250px; /* adjust size */
+    animation: swim 7s linear infinite;
+}
+
+/* Keyframes */
+@keyframes swim {
+    0% {
+        transform: translateX(-100%); /* start off-screen left */
+    }
+    100% {
+        transform: translateX(100vw); /* end off-screen right */
+    }
+    
+}
+
+body {
+    background-color: rgb(248, 218, 161);
+    text-align: center;
+    margin: 0;    /* remove default body margin */
+    padding: 0;
+}
+
+/* Force phone to stick at the very top */
+.item2 { /* phone */
+    position: absolute;
+    top: 0;
+    left: 70%;
+    z-index: 1000; /* make sure it’s above other elements */
+}
+
+.item2 img { /* phone image */
+    width: 400px;
+    display: block;
+    margin-top: -4vh;
+
+    /* Make it swing */
+    transform-origin: top center;  /* pivot point at the top */
+    animation: swing 2s ease-in-out infinite alternate;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.item3{ /*train */
+    grid-column: 9 ; /* First column */
+    grid-row: 2 / 3;    /* First row */
+}
+
+
+.item3 img { /* train image */
+    margin-top: 25vh; /* adjust vertical position */
+    width: 400px; /* adjust size */
+    animation: drive 7s linear infinite;
+}
+
+/* Keyframes */
+@keyframes drive {
+    0% {
+        transform: translateX(100%); /* start off-screen left */
+    }
+    100% {
+        transform: translateX(-100vw); /* end off-screen right */
+    }
+    
+}
+
+.item4{ /* window */
+    position: absolute;
+    top: 0;
+    left: 83%;
+    z-index: -1;
+}
+
+.item4 img { /* window image */
+    width: 330px;
+    display: block;
+}
+
+.item5{ /* notebook */
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.item5 img { /* notebook image */
+    width: 300px;
+    margin-top: 1vh;
+}
+
+.item8{ /* notebook */
+    grid-column: 5;
+    grid-row: 2;
+    transform-origin: left ;        
+    transition: transform 0.5s ease;  
+}
+
+.item8 img { /* notebook image */
+    width: 300px;
+}
+
+.item8:hover {
+    transform: rotateY(65deg);           
+  }
+
+
+.item6{ /* mask */
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.item6 img { /* mask */
+    width: 300px;  
+    transform-origin: center;  /* pivot point at the top */
+    animation: swing 1s ease-in-out infinite alternate;
+}
+
+.item7{ /* pencils */
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+.item7 img { /* pencils */
+    margin-top: 10vh;
+    width: 300px;  
+}
+
+
+#homeButton, #backButton, #nextButton {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: BubbleFont;
+    cursor: pointer;
+
+    /* reset browser defaults */
+    background: none;
+    border: none;
+    color: rgb(242, 173, 69); /* text color */
+    text-shadow: 2px 2px 4px #000; /* match your h1 style if you like */
+}
+
+#nextButton {
+    right: 20px; /* bottom-right corner */
+}
+
+#backButton {
+    left: 20px;  /* bottom-left corner */
+}
+
+#homeButton {
+    left: 80vh;  /* bottom-left corner */
+}
+
+#homeButton:hover,
+#backButton:hover,
+#nextButton:hover {
     transition: 0.3s;
-
+    font-size: 35px;
 }
+

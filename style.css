@@ -4,31 +4,32 @@
 }
 
 body{
-    background-color: pink;
+    background-color: rgb(255, 218, 251);
    text-align: center;
-   margin-top: 40vh;
 }
 
 h1{
     font-family: 'BubbleFont';
     font-size: 60px;
-    color: white;
+    margin-top: 20vh;
+    color: rgb(240, 142, 193);
     text-shadow: 2px 2px 4px #000000;
 }
 
-button{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+.image-container {
+    display: flex;            
+    justify-content: center;   
+    align-items: center;   
+    gap: 10px;              
+    flex-wrap: wrap;         
+    margin-top: 10vh;          
 }
 
-button:hover{
-    background-color: white;
-    opacity: 0.8;
-    transition: 0.3s;
+.image-container img {
+    width: 150px; 
+    transition: transform 0.3s ease;
+}
 
+.image-container img:hover {
+    transform: scale(1.3);
 }

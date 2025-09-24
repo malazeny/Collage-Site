@@ -9,16 +9,48 @@
 <body>
     <h1> My Tuesday </h1>
 
-    <button id="backButton"> Back </button>
-    <button id="redirectButton"> Next </button>
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <img src="images/Tuesday/tuna.png" alt="Tuna Image">
+        </div>
+        <div class="grid-item item2">
+            <img src="images/tuesday/phone.png" alt="Phone Image">
+        </div>
+        <div class="grid-item item3">
+            <img src="images/tuesday/train.png" alt="Train Image">
+        </div>
+        <div class="grid-item item4">
+            <img src="images/tuesday/reading.png" alt="Reading Image">
+        </div>
+        <div class="grid-item item5">
+            <img src="images/tuesday/opennotebook.png" alt="opennotebook Image">
+        </div>
+        <div class="grid-item item8">
+            <img src="images/tuesday/frontnotebook.png" alt="frontnotebook Image">
+        </div>
+        <div class="grid-item item6">
+            <img src="images/tuesday/mask.png" alt="Mask Image">
+        </div>
+        <div class="grid-item item7">
+            <img src="images/tuesday/coloredpencils.png" alt="coloredpencils">
+        </div>
+    </div>
+
+    <button id="backButton"> Monday </button>
+    <button id="homeButton"> Home </button>
+    <button id="nextButton"> Wednesday </button>
 
     <script>
-        document.getElementById('redirectButton').addEventListener('click', function() {
-            window.location.href = 'Wednesday.html';
-        });
-
         document.getElementById('backButton').addEventListener('click', function() {
             window.location.href = 'monday.html';
+        });
+
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('nextButton').addEventListener('click', function() {
+            window.location.href = 'Wednesday.html';
         });
     </script>
 </body>

@@ -9,16 +9,18 @@
 <body>
     <h1> My Friday </h1>
 
-    <button id="backButton"> Back </button>
-    <button id="redirectButton"> Next </button>
+    
+    <button id="backButton"> Thursday</button>
+    <button id="nextButton"> Home </button>
 
     <script>
-        document.getElementById('redirectButton').addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-
         document.getElementById('backButton').addEventListener('click', function() {
             window.location.href = 'thursday.html';
+        });
+
+        
+        document.getElementById('nextButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
         });
     </script>
 </body>

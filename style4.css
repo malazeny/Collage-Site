@@ -15,33 +15,152 @@ h1{
     text-shadow: 2px 2px 4px #000000;
 }
 
-#redirectButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    margin-left: 70%;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh; 
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#backButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    /* margin-right: 70%; */
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+ 
+.item1 { /* cherry */
+    grid-column: 1 ; /* First column */
+    grid-row: 1;    /* First row */
 }
 
-button:hover{
-    background-color: white;
-    opacity: 0.8;
+.item1 img{ /* cherry */
+    width: 200px; 
+    transform-origin: top center;  /* pivot point at the top */
+    animation: swing 2s ease-in-out infinite alternate;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.item2{ /* bag */
+    grid-column: 2 ; /* Second column */
+    grid-row: 1;    /* Second row */
+}
+
+.item2 img{ /* bag */
+    width: 300px;
+}
+
+.item7{ /* bag */
+    grid-column: 2 ; /* Second column */
+    grid-row: 1;    /* Second row */
+    transform-origin: top center;   /* pivot at the top */
+    transition: transform 0.5s ease;
+
+}
+
+.item7 img{ /* bag */
+    width: 300px;
+}
+
+.item7:hover {
+    margin-top: 3vh;
+    transform: rotateX(-65deg);           
+  }
+
+.item3{ /* house */
+    grid-column: 4 ; /* Second column */
+    grid-row: 1;    /* Second row */
+}
+
+.item3 img{ /* house */
+    width: 200px;
+    margin-top: 5vh;
+    margin-right: 40vh;
+
+}
+
+.item4{ /* koala */
+    grid-column: 3 ; /* Second column */
+    grid-row: 1;    /* Second row */
+}
+
+.item4 img{ /* koala */
+    width: 300px;
+}
+
+.item5{ /* sleep */
+    grid-column: 4 ; /* Second column */
+    grid-row: 1;    /* Second row */
+}
+
+.item5 img{  /* sleep */
+    width: 450px;
+    margin-bottom: 50vh
+}
+
+.item6{ /* train */
+    grid-column: 1 ; /* Second column */
+    grid-row: 1;    /* Second row */
+    margin-top: 30vh;
+    animation: swim 7s linear infinite;
+}
+
+.item6 img{ /* train */
+    width: 400px; /* adjust size */
+}
+
+/* Keyframes */
+@keyframes swim {
+    0% {
+        transform: translateX(-100%); /* start off-screen left */
+    }
+    100% {
+        transform: translateX(100vw); /* end off-screen right */
+    }
+    
+}
+
+#homeButton, #backButton, #nextButton {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: BubbleFont;
+    cursor: pointer;
+
+    /* reset browser defaults */
+    background: none;
+    border: none;
+    color: rgb(109, 60, 236); /* text color */
+    text-shadow: 2px 2px 4px #000; /* match your h1 style if you like */
+}
+
+#nextButton {
+    right: 20px; /* bottom-right corner */
+}
+
+#backButton {
+    left: 20px;  /* bottom-left corner */
+}
+
+#homeButton {
+    left: 80vh;  /* bottom-left corner */
+}
+
+#homeButton:hover,
+#backButton:hover,
+#nextButton:hover {
     transition: 0.3s;
-
+    font-size: 35px;
 }
+

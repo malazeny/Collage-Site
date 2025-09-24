@@ -15,33 +15,32 @@ h1{
     text-shadow: 2px 2px 4px #000000;
 }
 
-#redirectButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    margin-left: 70%;
+ #backButton, #nextButton {
+    position: fixed;
+    bottom: 20px;
     padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-family: BubbleFont;
     cursor: pointer;
-    border-radius: 5px;
+
+    /* reset browser defaults */
+    background: none;
+    border: none;
+    color: rgb(20, 150, 31); /* text color */
+    text-shadow: 2px 2px 4px #000; /* match your h1 style if you like */
 }
 
-#backButton{
-    background-color: rgb(243, 143, 160);
-    border: black solid 2px;
-    margin-top: 70vh;
-    /* margin-right: 70%; */
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
+#nextButton {
+    right: 20px; /* bottom-right corner */
 }
 
-button:hover{
-    background-color: white;
-    opacity: 0.8;
+#backButton {
+    left: 20px;  /* bottom-left corner */
+}
+
+#homeButton:hover,
+#backButton:hover,
+#nextButton:hover {
     transition: 0.3s;
-
+    font-size: 35px;
 }
