@@ -18,8 +18,8 @@ h1{
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 15vh);
-    grid-template-rows: repeat(7, 15vh); /* 10 rows split evenly */
-    height: 100vh; /* exactly one screen tall */
+    grid-template-rows: repeat(7, 15vh); 
+    height: 100vh; 
     gap: 5px;
     width: 100%;
     margin: 0 auto;
@@ -32,19 +32,19 @@ h1{
 }
 
 .item1{ /* chicken */
-    grid-column: 8 ; /* First column */
-    grid-row: 1;    /* First row */
+    grid-column: 8 ;
+    grid-row: 1;
 }
 
 
 .item1 img { /* chicken image */
-    width: 250px; /* adjust size */
+    width: 250px; 
     animation: swim 7s linear infinite;
 }
 
 .item2 { /* coffee */
-    grid-column: 3 ; /* Third column */
-    grid-row: 1;    /* First row */
+    grid-column: 3 ; 
+    grid-row: 1;    
 }
 
 @keyframes pour {
@@ -66,8 +66,8 @@ h1{
 }
 
 .item3{ /* coke */
-    grid-column: 8 ; /* First column */
-    grid-row: 3 ;    /* First row */
+    grid-column: 8 ;
+    grid-row: 3 ; 
 }
 
 
@@ -81,7 +81,7 @@ h1{
 }
 
 .item3 img { /* coke image */
-    width: 200px; /* adjust size */
+    width: 200px; 
     animation: shake 0.5s ease-in-out infinite;
     transform-origin: bottom center;  /* pivot at the base */
 }
@@ -148,8 +148,8 @@ h1{
     /* reset browser defaults */
     background: none;
     border: none;
-    color: rgb(236, 71, 115); /* text color */
-    text-shadow: 2px 2px 4px #000; /* match your h1 style if you like */
+    color: rgb(236, 71, 115); 
+    text-shadow: 2px 2px 4px #000; 
 }
 
 #nextButton {
